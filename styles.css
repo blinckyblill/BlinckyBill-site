@@ -1,0 +1,131 @@
+:root{
+  --bg:#0b0f14;
+  --card:#111826;
+  --text:#e7eefc;
+  --muted:#a9b7d1;
+  --accent:#4da3ff;
+  --accent2:#21d19f;
+  --border:rgba(255,255,255,.10);
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(77,163,255,.18), transparent 55%),
+              radial-gradient(900px 500px at 100% 10%, rgba(33,209,159,.12), transparent 50%),
+              var(--bg);
+  color:var(--text);
+  line-height:1.55;
+}
+
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+
+.topbar{
+  position:sticky;top:0;z-index:10;
+  backdrop-filter: blur(10px);
+  background: rgba(11,15,20,.70);
+  border-bottom: 1px solid var(--border);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
+.logo{
+  width:38px;height:38px;border-radius:12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: var(--shadow);
+}
+.menu{display:flex;gap:10px;flex-wrap:wrap}
+.menu a{
+  padding:10px 12px;border-radius:12px;
+  color:var(--muted);
+  border:1px solid transparent;
+}
+.menu a:hover{color:var(--text);border-color:var(--border);background:rgba(255,255,255,.04)}
+.menu a.active{color:var(--text);border-color:rgba(77,163,255,.35);background:rgba(77,163,255,.08)}
+
+.hero{
+  display:grid;grid-template-columns: 1.2fr .8fr;gap:22px;
+  padding:28px 0 14px;
+}
+@media (max-width: 860px){
+  .hero{grid-template-columns:1fr}
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.heroMain{padding:26px}
+.heroMain h1{margin:0 0 10px;font-size:40px;line-height:1.1}
+.heroMain p{margin:0 0 18px;color:var(--muted);font-size:16px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+.badge{
+  font-size:13px;color:var(--text);
+  padding:8px 10px;border-radius:999px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.04);
+}
+.ctaRow{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 14px;border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  font-weight:700;
+}
+.btn:hover{background:rgba(255,255,255,.10)}
+.btnPrimary{
+  background: linear-gradient(135deg, rgba(77,163,255,.95), rgba(33,209,159,.90));
+  border-color: transparent;
+  color:#071018;
+}
+.btnPrimary:hover{filter:brightness(1.04)}
+.btnSmall{padding:10px 12px;border-radius:12px;font-weight:700}
+
+.heroSide{padding:18px}
+.heroSide h3{margin:0 0 10px}
+.list{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.list li{
+  padding:12px;border-radius:14px;
+  border:1px solid var(--border);
+  background:rgba(0,0,0,.10);
+}
+.list li span{display:block;color:var(--muted);font-size:13px}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0}
+@media (max-width: 860px){.grid3{grid-template-columns:1fr}}
+.feature{padding:18px}
+.feature h4{margin:0 0 8px}
+.feature p{margin:0;color:var(--muted)}
+
+.sectionTitle{margin:26px 0 12px;font-size:22px}
+.sectionText{color:var(--muted);margin:0 0 16px}
+
+.split{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+@media (max-width: 860px){.split{grid-template-columns:1fr}}
+.block{padding:18px}
+
+.price{
+  display:flex;align-items:flex-start;justify-content:space-between;gap:14px;
+}
+.price strong{font-size:18px}
+.note{color:var(--muted);font-size:13px;margin-top:6px}
+
+.footer{
+  margin-top:26px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+.footer .container{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center}
+.small{font-size:13px}
+.kicker{color:rgba(77,163,255,.9);font-weight:800;letter-spacing:.2px}
